@@ -1,0 +1,53 @@
+Ip:
+    31648 total packets received
+    0 forwarded
+    0 incoming packets discarded
+    31648 incoming packets delivered
+    18406 requests sent out
+Icmp:
+    44 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        echo requests: 42
+        echo replies: 2
+    44 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo request: 2
+        echo replies: 42
+IcmpMsg:
+        InType0: 2
+        InType8: 42
+        OutType0: 42
+        OutType8: 2
+Tcp:
+    0 active connections openings
+    3 passive connection openings
+    0 failed connection attempts
+    0 connection resets received
+    0 connections established
+    31604 segments received
+    18362 segments send out
+    0 segments retransmited
+    0 bad segments received.
+    0 resets sent
+Udp:
+    0 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    0 packets sent
+UdpLite:
+TcpExt:
+    29248 packets directly queued to recvmsg prequeue.
+    470600 bytes directly in process context from backlog
+    41742216 bytes directly received in process context from prequeue
+    92 packet headers predicted
+    29029 packets header predicted and directly queued to user
+    5 acknowledgments not containing data payload received
+    TCPOFOQueue: 2343
+    TCPOrigDataSent: 3
+IpExt:
+    InOctets: 47391304
+    OutOctets: 1025980
+    InNoECTPkts: 44
+    InECT0Pkts: 31604
