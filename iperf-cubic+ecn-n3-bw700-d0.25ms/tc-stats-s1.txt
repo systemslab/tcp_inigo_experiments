@@ -1,0 +1,33 @@
+qdisc pfifo_fast 0: dev eth0 root refcnt 2 bands 3 priomap  1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+ Sent 1029302647 bytes 1477017 pkt (dropped 0, overlimits 0 requeues 238489) 
+ backlog 0b 0p requeues 238489 
+qdisc htb 5: dev s1-eth1 root refcnt 2 r2q 10 default 1 direct_packets_stat 0 direct_qlen 1000
+ Sent 9632865270 bytes 6362693 pkt (dropped 9, overlimits 12821112 requeues 0) 
+ backlog 0b 0p requeues 0 
+qdisc red 6: dev s1-eth1 parent 5:1 limit 1000000b min 30000b max 35000b ecn 
+ Sent 9632865270 bytes 6362693 pkt (dropped 9, overlimits 315496 requeues 0) 
+ backlog 0b 0p requeues 0 
+  marked 315487 early 9 pdrop 0 other 0
+qdisc netem 10: dev s1-eth1 parent 6: limit 425 delay 249us
+ Sent 9632865270 bytes 6362693 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+qdisc htb 5: dev s1-eth2 root refcnt 2 r2q 10 default 1 direct_packets_stat 0 direct_qlen 1000
+ Sent 109434254 bytes 1657767 pkt (dropped 0, overlimits 3164654 requeues 0) 
+ backlog 0b 0p requeues 0 
+qdisc red 6: dev s1-eth2 parent 5:1 limit 1000000b min 30000b max 35000b ecn 
+ Sent 109434254 bytes 1657767 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  marked 0 early 0 pdrop 0 other 0
+qdisc netem 10: dev s1-eth2 parent 6: limit 425 delay 249us
+ Sent 109434254 bytes 1657767 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+qdisc htb 5: dev s1-eth3 root refcnt 2 r2q 10 default 1 direct_packets_stat 0 direct_qlen 1000
+ Sent 110041960 bytes 1667066 pkt (dropped 0, overlimits 3189401 requeues 0) 
+ backlog 0b 0p requeues 0 
+qdisc red 6: dev s1-eth3 parent 5:1 limit 1000000b min 30000b max 35000b ecn 
+ Sent 110041960 bytes 1667066 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
+  marked 0 early 0 pdrop 0 other 0
+qdisc netem 10: dev s1-eth3 parent 6: limit 425 delay 249us
+ Sent 110041960 bytes 1667066 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0 
